@@ -6,7 +6,7 @@
 /*   By: bloisel <bloisel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 11:00:21 by bloisel           #+#    #+#             */
-/*   Updated: 2024/10/30 11:04:58 by bloisel          ###   ########.fr       */
+/*   Updated: 2024/11/06 16:23:40 by bloisel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,16 +24,16 @@
 class Harl
 {
     public : 
-        void complain( std::string level );
         Harl(void); 
-	    ~Harl(void); 
-
+	    ~Harl(void);
+        void complain( std::string level ); 
+      
     private :
-        void debug( void );
-        void info( void );
-        void warning( void );
-        void error( void );
-
+        void _debug( void );
+        void _info( void );
+        void _warning( void );
+        void _error( void );
+        static void (Harl::*f[4])();
 };
 
 
